@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rowan Kandil | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f8e1f4, #e6d6ff, #d6ecff);
+      color: #2d2d2d;
+      overflow-x: hidden;
+    }
+
+    /* Soft animated background shapes */
+    .blob {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.4;
+      z-index: -1;
+      animation: float 22s infinite alternate ease-in-out;
+    }
+
+    .blob1 { width: 420px; height: 420px; background: #f4b6e5; top: -120px; left: -120px; }
+    .blob2 { width: 360px; height: 360px; background: #cdb4ff; bottom: -140px; right: -140px; animation-delay: 6s; }
+    .blob3 { width: 300px; height: 300px; background: #bde0fe; top: 45%; left: 65%; animation-delay: 12s; }
+
+    @keyframes float {
+      from { transform: translateY(0) translateX(0); }
+      to { transform: translateY(70px) translateX(50px); }
+    }
+
+    header {
+      text-align: center;
+      padding: 110px 20px 70px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #b5179e, #7209b7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+    }
+
+    header p {
+      margin-top: 15px;
+      font-weight: 300;
+      font-size: 1.2rem;
+      color: #444;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      padding: 16px;
+      border-radius: 0 0 20px 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #9d4edd;
+      transform: translateY(-2px);
+    }
+
+    section {
+      max-width: 900px;
+      margin: 110px auto;
+      padding: 0 20px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      color: #7b2cbf;
+      font-weight: 600;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.75);
+      padding: 22px;
+      border-radius: 18px;
+      margin-bottom: 22px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .card a {
+      color: #7209b7;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: linear-gradient(90deg, #e0bbff, #ffc8dd);
+      padding: 8px 14px;
+      border-radius: 20px;
+      margin: 6px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px 20px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+
+  <header>
+    <h1>Hi, I'm Rowan Kandil</h1>
+    <p>Computer Science Student | AI & Emerging Technologies | Creative Technologist</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>
+        I am a Computer Science student with a strong interest in Artificial Intelligence,
+        innovative technologies, and thoughtful digital design. I enjoy building solutions
+        that combine technical depth with clean, engaging user experiences.
+      </p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+      <h3>AI Disease Diagnosis Assistant</h3>
+      <p>
+        A machine learning–powered application that assists users in identifying potential
+        diseases based on symptoms. The system uses trained models and an interactive
+        interface to provide intelligent, accessible health insights.
+      </p>
+      <p>
+        <a href="https://ml-disease-diagnosis-app-dk8cvrbezirndpyhgjop4h.streamlit.app/" target="_blank">
+          View Live Project
+        </a>
+      </p>
+    </div>
+
+    <!-- You can duplicate this card for more projects later -->
+
+  </section>
+
+  <section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>Java</span>
+    <span>Python</span>
+    <span>Automation</span>
+    <span>Artificial Intelligence</span>
+    <span>Data Science</span>
+  </div>
+</section>
+
+
+  <section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p><strong>Email:</strong> <a href="mailto:rowan.bint.kandil@gmail.com">rowan.bint.kandil@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rowan-kandil-b7aa13343" target="_blank">linkedin.com/in/rowan-kandil-b7aa13343</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/Ruwiysis" target="_blank">github.com/Ruwiysis</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+966561718851">+966 56 171 8851</a></p>
+  </div>
+</section>
+
+  <footer>
+    © 2026 Rowan Kandil. All rights reserved.
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+
+      sections.forEach(section => {
+        const boxTop = section.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          section.classList.add("visible");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+  </script>
+
+</body>
+</html>
