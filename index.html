@@ -18,6 +18,12 @@
       background: linear-gradient(135deg, #f8e1f4, #e6d6ff, #d6ecff);
       color: #2d2d2d;
       overflow-x: hidden;
+      animation: fadeInPage 1.2s ease-in-out;
+    }
+
+    @keyframes fadeInPage {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     /* Soft animated background shapes */
@@ -57,6 +63,32 @@
       font-weight: 300;
       font-size: 1.2rem;
       color: #444;
+    }
+
+    /* CV Button */
+    .cv-button {
+      display: inline-block;
+      margin-top: 30px;
+      background: linear-gradient(90deg, #9d4edd, #c77dff);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      animation: glow 2.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 10px rgba(157, 78, 221, 0.4); }
+      to { box-shadow: 0 0 25px rgba(157, 78, 221, 0.8); }
+    }
+
+    .cv-button:hover {
+      transform: translateY(-6px) scale(1.05);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     }
 
     nav {
@@ -153,7 +185,13 @@
 
   <header>
     <h1>Hi, I'm Rowan Kandil</h1>
-    <p>Computer Science Student | AI & Emerging Technologies | Creative Technologist</p>
+    <p>Computer Science Student | AI & Emerging Technologies</p>
+
+    <a href="https://raw.githubusercontent.com/Ruwiysis/Portfolio/main/Rowan_Kandil_CV.pdf"
+       target="_blank"
+       class="cv-button">
+       📄 Download CV
+    </a>
   </header>
 
   <nav>
@@ -162,6 +200,8 @@
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
+
+  <!-- Rest of your sections stay the same -->
 
   <section id="about">
     <h2>About Me</h2>
@@ -181,10 +221,7 @@
       <h3>AI Disease Diagnosis Assistant</h3>
       <p>
         An AI-powered disease diagnosis assistant that allows users to input symptoms and
-        get the most similar diseases along with treatment suggestions using a dataset from Kaggle.
-       🔹 Built with: Python, Streamlit, TF-IDF, cosine similarity
-       🔹 Features: Top 3 likely diseases, treatment recommendations, easy web interface
-It’s live here:
+        get the most similar diseases along with treatment suggestions.
       </p>
       <p>
         <a href="https://ml-disease-diagnosis-app-dk8cvrbezirndpyhgjop4h.streamlit.app/" target="_blank">
@@ -192,31 +229,27 @@ It’s live here:
         </a>
       </p>
     </div>
-
-    <!-- You can duplicate this card for more projects later -->
-
   </section>
 
   <section id="skills">
-  <h2>Skills</h2>
-  <div class="skills">
-    <span>Java</span>
-    <span>Python</span>
-    <span>Automation</span>
-    <span>Artificial Intelligence</span>
-    <span>Data Science</span>
-  </div>
-</section>
-
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>Java</span>
+      <span>Python</span>
+      <span>Automation</span>
+      <span>Artificial Intelligence</span>
+      <span>Data Science</span>
+    </div>
+  </section>
 
   <section id="contact">
-  <h2>Contact</h2>
-  <div class="card">
-    <p><strong>Email:</strong> <a href="mailto:rowan.bint.kandil@gmail.com">rowan.bint.kandil@gmail.com</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rowan-kandil-b7aa13343" target="_blank">linkedin.com/in/rowan-kandil-b7aa13343</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/Ruwiysis" target="_blank">github.com/Ruwiysis</a></p>
-  </div>
-</section>
+    <h2>Contact</h2>
+    <div class="card">
+      <p><strong>Email:</strong> <a href="mailto:rowan.bint.kandil@gmail.com">rowan.bint.kandil@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rowan-kandil-b7aa13343" target="_blank">LinkedIn Profile</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/Ruwiysis" target="_blank">github.com/Ruwiysis</a></p>
+    </div>
+  </section>
 
   <footer>
     © 2026 Rowan Kandil. All rights reserved.
@@ -242,5 +275,3 @@ It’s live here:
 
 </body>
 </html>
-
-
